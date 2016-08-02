@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="top">
+    <link href=" css/style.css " rel="stylesheet ">
+    <title>전국 생활 코딩</title>
+    <meta charset="UTF-8">
+
+    <script>
+        function init_cont() {
+            document.getElementById("cont ").innerHTML = "HTML is.. ";
+        }
+
+        function change_cont(a) {
+            if (a == 1) {
+                document.getElementById("name").innerHTML = "HTML ";
+                document.getElementById("cont ").innerHTML = "HTML is.. ";
+            } else if (a == 2) {
+                document.getElementById("name").innerHTML = "CSS ";
+                document.getElementById("cont ").innerHTML = "CSS is.. ";
+            } else {
+                document.getElementById("name").innerHTML = "Javasciprt";
+                document.getElementById("cont ").innerHTML = "Javasciprt is.. ";
+            }
+        }
+    </script>
+
+    <h1 class="top ">전국 생활 코딩</h1>
+</head>
+
+<body onload="init_cont() " id="target" class="white">
+    <script>
+        UPLOADCARE_LOCALE = "en ";
+        UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr skydrive ";
+        UPLOADCARE_PUBLIC_KEY = "6e28421aacee7e0a10ee ";
+    </script>
+    <script charset="utf-8 " src="//ucarecdn.com/widget/2.9.0/uploadcare/uploadcare.full.min.js "></script>
+
+    <hr>
+
+    <div id="지역">
+        <ul>
+            <li onclick="change_cont(1) ">html </li>
+            <li onclick="change_cont(2) ">css </li>
+            <li onclick="change_cont(3) ">javast</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h2 id="name">welcome</h2>
+        <div id="cont "> </div>
+        <input type="button" value="white" onclick="document.getElementById('target').className='white'">
+        <input type="button" value="black" onclick="document.getElementById('target').className='black'">
+        <input type="button" value="delete" onclick="document.getElementById('name').remove()">
+    </div>
+
+
+    <input type="hidden " role="uploadcare-uploader " data-multiple="true " />
+</body>
+
+</html>
